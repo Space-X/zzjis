@@ -1,0 +1,28 @@
+.label {
+	color: white;
+	height: auto;
+	font-size: 15px;
+	background-color: transparent;
+}
+
+.label-checkbox {
+	width: auto;
+	height: auto;
+	color: white;
+	font-size: 15px;
+	background-color: transparent;
+}
+
+.label-checkbox .checkboxImg {
+	width: 25px;
+	margin-right: 5px;
+}
+
+.label-checkbox .checkboxView {
+	width: 5px;
+	/*隐藏复选框*/
+	opacity: 0;
+	display: none;
+	padding: 0px 0px 0px;
+	margin: 0px;
+}
