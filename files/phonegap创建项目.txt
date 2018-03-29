@@ -1,0 +1,128 @@
+
+在控制台运行命令：
+
+ npm install -g phonegap                                     ( Mac使用: sudo npm install -g phonegap )
+//等待安装   完成后安装 cordova:
+ npm install -g cordova                                       ( Mac使用: sudo npm install -g cordova )
+
+phonegap create my-app  
+cd my-app  
+phonegap run android  （ios）
+
+
+
+教程http://www.runoob.com/ionic/ionic-creat-app.html
+
+
+入门必须： 
+ (1) 看一遍ionic的文档，  http://ionicframework.com/  ； 
+ Ionic 是一个用HTML, CSS 跟JS 开发的一个用于移动设备的web app 开发框架,采用 Sass与AngularJS 开发。 
+
+(2) 看一遍phonegap的文档；目前phonegap又取名为cordova；有些常用的命令总结如下： 
+
+项目例子：http://my.oschina.net/nosand/blog/294011 
+ ionic： 
+ Create hybrid mobile apps with the web technologies you love. 
+ Free and open source, Ionic offers a library of mobile-optimized HTML, 
+ CSS and JS components, gestures, and tools for building highly interactive apps. 
+ Built with Sass and optimized for AngularJS. 
+
+Qunee有一个上海地铁图的例子，有客户希望转成mobile app，考察过android的webview，以及PhoneGap等多种Hybrid App方案后，最后选择使用ionic，准确的说是ionic + PhoneGap + Qunee ionic是一种基于HTML5创建Hybrid应用的前端框架，借助phoneGap + angularJS实现一套跨平台，轻量的移动UI方案，本文将介绍借助ionic实现移动版Qunee上海地图的示例 
+ 背景知识 
+
+安装ionic所需软件环境 – java, android sdk等 
+
+ionic实际上是集大成者，借助了多种技术，自身是一套UI框架，结合PhoneGap实现跨平台移动APP，需要先安装好依赖的程序，比如nodejs, java, ADT, ant, xcode等，并设置好java_home, 添加android sdk tool到环境变量 
+
+ mac os x下安装ant  
+
+ brew update 
+ brew install ant 
+#mac osx 下，打开.bash_profile文件 
+ cd ~ 
+ open .bash_profile 
+#设置相关的Path，mac os x下增加类似下面的内容 
+export JAVA_HOME= /usr/libexec/java_home -v 1.8   
+
+# android 
+ export PATH=${PATH}:/Users/macbook/WorkSpace/android-sdk-macosx/platform-tools:/Users/macbook/WorkSpace/android-sdk-macosx/tools 
+
+
+ant 环境变量配置：  ANDROID_HOME：  sdk的地址   ANT_HOME ：ant的bin地址
+环境变量path添加 %ANT_HOME%/bin;%ANT_HOME%/lib
+
+
+npm install -g cordova ionic 
+
+ionic的文档  http://ionicframework.com/  ； 
+
+ 更多请参考官方文档+google http://ionicframework.com/getting-started/ 
+ 创建ionic项目q-metro 
+
+使用下面的命令创建一个新的项目 
+ ionic start q-metro 
+
+先在桌面环境下测试，Chrome运行正常，然后编译成各种移动平台版本，这里以android版本为例 
+ ionic start q-metro 
+ cd q-metro 
+ ionic platform add android 
+ ionic build android 
+ ionic run android 
+ 如果要在虚拟机中测试，可以改用 
+ ionic emulate android 
+ ionic支持多种移动平台，如果希望创建ios可以将”android”改成”ios” 下面是android设备上真机运行界面如下： 
+
+Now we can tell cordova to generate our release build: 
+
+ $ cordova build --release android 
+
+查看ionic中的plugins    ---ionic plugins list
+
+
+ionic2  
+
+1:npm install -g cordova ionic
+2: ionic start myapp tabs
+3:cd myapp ionic serve
+4: ionic upload
+
+$ ionic cordova platform add ios
+$ ionic cordova platform add android
+$ ionic cordova platform rm ios
+
+
+
+
+//===================================================http://blog.csdn.net/zapzqc/article/details/41802453====================================
+4.更新ionic等
+
+    a.更新cordova及ionic包
+
+    npm update -g cordova ionic  
+
+    b.更新已建ionic项目中的js类库，命令行中先进入项目所在目录，然后运行： 
+
+     在CODE上查看代码片派生到我的代码片01.ionic lib update  
+
+
+5.展现ionic项目结果（显示在ios和android上的样式）
+
+
+在CODE上查看代码片派生到我的代码片01.ionic serve --lab  
+
+
+
+
+6.查看ionic版本（当前最新版本为1.2.13）
+
+
+在CODE上查看代码片派生到我的代码片01.ionic -v  
+
+
+安装插件
+
+ 通过下载下来的包安装 
+下载的包放在本地安装 
+cordova plugin add C:\cordova\NativePageTransitions-0.5.6 
+
+
